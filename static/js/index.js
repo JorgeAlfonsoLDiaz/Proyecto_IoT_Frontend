@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         radio.addEventListener('change', function () {
             const selectedValue = document.querySelector('input[name="led"]:checked').value;
 
+            console.log(`URI: ${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`);
+
             const xhr = new XMLHttpRequest();
 
             xhr.open('PATCH', `${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`, true);
             xhr.setRequestHeader('Content-Type', 'application/json');
-            console.log(`URI: ${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`);
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
