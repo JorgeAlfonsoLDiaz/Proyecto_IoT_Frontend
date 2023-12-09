@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Agregar un evento de cambio a cada radio button
     radioButtons.forEach(function (radio) {
-        radio.addEventListener('change', function () {
-            const selectedValue = document.querySelector('input[name="led"]:checked').value;  // Obtener el valor seleccionado
+        radio.addEventListener('change', function (event) {
+            event.preventDefault(); // Evitar el envío automático del formulario
 
+            const selectedValue = document.querySelector('input[name="led"]:checked').value;
 
             const xhr = new XMLHttpRequest();
 
-            xhr.open('PATCH', `${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`, true);
+            xhr.open('PATCH', `${API_URL}/dispositivo/1`, true);
             xhr.setRequestHeader('Content-Type', 'application/json');
 
             xhr.onreadystatechange = function () {
