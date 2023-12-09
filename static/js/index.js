@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             xhr.open('PATCH', `${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`, true);
             xhr.setRequestHeader('Content-Type', 'application/json');
+            console.log(`URI: ${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`);
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
@@ -35,4 +36,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-console.log(`${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`)
