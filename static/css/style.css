@@ -1,0 +1,144 @@
+body{
+    background-color: #48d148;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(235, 233, 233);
+    border-width: 20px;
+    border-color: #7a7676;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+td{
+    text-align: center;
+}
+
+a{
+    font-size: 25px;
+    font-family: 'Montserrat';
+}
+
+a.opciones{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 35px;
+    font-family: 'Open Sans';
+}
+
+th{
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+td{
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+label{
+    font-size: 18px;
+    font-family: 'Montserrat';
+}
+
+button{
+    margin: 10px 7px;
+    cursor: pointer;
+}
+
+#Insertar{
+    height: 30px;
+    width: 110px;
+    color: #ffff;
+    background-color:#4ecc3d;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+#Insertar:hover{
+    background-color: #23d113;
+
+}
+
+#Buscar{
+    height: 30px;
+    width: 110px;
+    color: #ffff;
+    background-color:#3d5acc;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+#Buscar:hover{
+    background-color: #1339d1;
+
+}
+
+#Actualizar{
+    height: 30px;
+    width: 110px;
+    color: #ffff;
+    background-color:#9223d3;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+#Actualizar:hover{
+    background-color: #751ea7;
+
+}
+
+#Borrar{
+    height: 30px;
+    width: 110px;
+    color: #ffff;
+    background-color: #f04223;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+#Borrar:hover{
+    background-color: #ce3b21;
+}
+
+#Cancelar{
+    height: 30px;
+    width: 110px;
+    color: #ffff;
+    background-color: #f0a823;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+#Cancelar:hover{
+    background-color: #ce901e;
+}
+
+button:active{
+    position: relative;
+    top: 2px;
+}
+
+p{
+    font-size: 15px;
+    font-family: 'Open Sans';
+}
