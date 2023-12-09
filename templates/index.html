@@ -21,18 +21,18 @@
         <div class="center-1">
             <p style="font-size: 20px;">Estado del LED:</p>
 
-            <form action="/dispositivo/1" method="PATCH">
+            <form action="/dispositivo/1" method="PATCH" id="updateForm">
                 <label> 
                     <input type="radio" name="led" id="apagado" value="0">
                     Apagado 
                 </label>
-
+            
                 <label> 
                     <input type="radio" name="led" id="encendido" value="1">
                     Encendido 
                 </label>
-
-                <input type="submit" name="Actualizar" id="Actualizar" style="margin: 10px 20px;">
+            
+                <button type="button" id="Actualizar" style="margin: 10px 20px;">Actualizar</button>
             </form>
         </div>
     </div>

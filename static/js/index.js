@@ -1,19 +1,17 @@
 const API_URL = 'https://proyecto-iot-api-eb469e9ce75a.herokuapp.com';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
+    const updateForm = document.getElementById('updateForm');
     const radioButtons = document.querySelectorAll('input[type="radio"]');
     
     // Agregar un evento de cambio a cada radio button
     radioButtons.forEach(function (radio) {
-        radio.addEventListener('change', function (event) {
-            event.preventDefault(); // Evitar el envío automático del formulario
-
+        radio.addEventListener('change', function () {
             const selectedValue = document.querySelector('input[name="led"]:checked').value;
 
             const xhr = new XMLHttpRequest();
 
-            xhr.open('PATCH', `${API_URL}/dispositivo/1`, true);
+            xhr.open('PATCH', `${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`, true);
             xhr.setRequestHeader('Content-Type', 'application/json');
 
             xhr.onreadystatechange = function () {
@@ -28,5 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             xhr.send(JSON.stringify({ valor: selectedValue }));
         });
+    });
+
+    // Agregar un evento al botón "Actualizar" para evitar el envío automático del formulario
+    const actualizarButton = document.getElementById('Actualizar');
+    actualizarButton.addEventListener('click', function () {
+        updateForm.submit();
     });
 });
