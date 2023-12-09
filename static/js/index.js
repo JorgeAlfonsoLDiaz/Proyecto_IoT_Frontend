@@ -1,4 +1,4 @@
-const API_URL = 'https://proyecto-iot-api-eb469e9ce75a.herokuapp.com';
+const API_URL = "https://proyecto-iot-api-eb469e9ce75a.herokuapp.com";
 
 document.addEventListener('DOMContentLoaded', function () {
     const updateForm = document.getElementById('updateForm');
@@ -34,3 +34,5 @@ document.addEventListener('DOMContentLoaded', function () {
         updateForm.submit();
     });
 });
+
+console.log(`${API_URL}/dispositivo/1/${encodeURIComponent(selectedValue)}`)
